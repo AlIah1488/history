@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ХУЙНЯ</title>
+    <link rel="shortcut icon" type="image/png" href="icon.png">
+    <style>
+        body{
+            background-color: #2e24541e;
+            
+            color: #ffffff;
+        }
+        
+        #sidebar {
+            font-family: Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    left: -20%;
+    width: 10%;
+    height: 100%;
+    background-color: #301934;
+    color: #fff;
+    padding-top: 50px;
+    transition: left 0.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+}
+
+#sidebar.opened {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background-color: #301934;
+    color: #fff;
+    padding-top: 50px;
+    transition: left 0.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#sidebar ul {
+    color: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar li {
+    color: #fff;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    transition: transform 0.3s ease-in-out;
+}
+
+#sidebar li:last-child {
+    border-bottom: none;
+    color: #fff;
+}
+
+#sidebar li:hover {
+    transform: translateX(10px);
+    transition: transform 0.3s ease-in-out;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#sidebar li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 5px;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+#sidebar a {
+    color: #c6c6c6;
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a {
+    color: #fff;
+}
+
+
+        #menuopen{
+            border:0;
+            background-color: #00000000;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 10px;
+            left: 10px;
+            margin: 0 auto;
+            z-index: 666;
+            transition: left 0.5s ease-in-out;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            user-select: none;
+        }
+        #menuopen.opened{
+            
+            border:0;
+            background-color: #00000000;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 10px;
+            left: 6%;
+            margin: 0 auto;
+            z-index: 666;
+            transition: left 0.3s ease-in-out;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            user-select: none;
+        }
+        #menuopen img{
+            width: 100%;
+            height: auto;
+            filter: brightness(0) invert(1);
+        }
+        #menuopen:focus,
+        #menuopen:active {
+            outline: none; 
+        }
+        #menuopen.opened:focus,
+        #menuopen.opened:active {
+            outline: none;
+        }
+        #sidebar li:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-color: #fff;
+        opacity: 1;
+        }
+        .back {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        user-select: none;
+    }
+    .dream {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px black;
+  margin-top: 50px;
+  user-select: none;
+  opacity: 0.5;
+}
+.ps{
+    position: absolute;
+    color: #c0c0c0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    user-select: none;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+    </style>
+</head>
+<body>
+    <div class="ps">
+        256-th forever<br>
+        by Allah 
+        and HeroIAm<br>
+        rest in piece<br>
+        with love
+    </div>
+    <img class="back" src="background.jpg">
+    <button id="menuopen"><img src="burger.png"></button>
+    <div id="sidebar">
+        <ul>
+            <li><a href="https://aliah1488.github.io/calcgovna/">КАЛЬКУЛЯТОР</a></li>
+            <li><a href="https://aliah1488.github.io/tidaun/">ТЕСТ НА 256</a></li>
+            <li><a href="https://aliah1488.github.io/reactionspeed/">ТЕСТ НА АИМ</a></li>
+            
+        </ul>
+    </div>
+    <script>
+        button = document.getElementById("menuopen")
+        menu = document.getElementById("sidebar")
+
+        button.addEventListener("click", function(){
+            menu.classList.toggle('opened');
+            button.classList.toggle('opened');
+        });
+    </script>
+</body>
+</html>
+
